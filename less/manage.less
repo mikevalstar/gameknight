@@ -1,0 +1,56 @@
+// Twitter Bootstrap for main styling
+@import "bootstrap/bootstrap.less";
+@import "bootstrap/responsive.less";
+@import "timepicker.less";
+
+.small{
+    font-size: 0.85em;
+}
+
+.table-search-toolbar{
+    .searchbox{ 
+        .pull-left; 
+        padding-top: 0.6em;
+        .form-search{
+            margin-bottom: 0;
+        }
+    }
+    .recordsbox{ 
+        .pull-right; 
+        padding-top: 1.4em;
+    }
+    .pagination{
+        margin: 6px 0;
+    }
+}
+
+.linkrow, .linkcol{
+    cursor: pointer;
+}
+
+.linkrow:hover, .linkcol:hover{ 
+    color: @blue; 
+}
+
+#headnav{
+    blockquote{ font-size: 0.85em; margin-bottom: 0; }
+}
+
+#footer {
+    text-align: left;
+    margin: 30px 0;
+    color: #888;
+}
+
+h2 + .btn-group.pull-right {
+    margin-top: 15px;
+}
+
+.pagination .records-count {
+    display: block;
+    color: #999;
+}
+
+a.tt{
+    color: black;
+}

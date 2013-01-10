@@ -1,0 +1,4 @@
+tmp/*
+log/*
+include/config.inc.php
+*.css
