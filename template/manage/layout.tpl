@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KG Game Knight</title>
+    <title>{block "title"}{/block}Game Knight</title>
     <link rel="stylesheet" href="/css/css.php" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="/js/bootstrap-tab.js"></script>
@@ -15,10 +15,10 @@
     <script src="/js/kggamenight.js"></script>
 </head>
 <body>
-    <div id="headnav" class="navbar navbar-static-top">
+    <div id="headnav" class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="/">KG Game Knight</a>
+                <a class="brand" id="title_brand" href="/">KG Game Knight</a>
                 {if $U}
                 <ul class="nav" style="padding-left: 145px; font-size: 0.9em;">
                     <li><a href="/Events">Events</a></li>
@@ -35,8 +35,8 @@
                 {block "navbar-top"}{/block}
             </div>
         </div>
-        <div class="container"><blockquote style="color: gray; font-style: italic;">Because he's the hero Konrad Group deserves, but not the one it needs right now. So we'll hunt him. Because he can take it. Because he's not our hero. He's a silent guardian, a watchful protector. A game knight.</blockquote></div>
     </div>
+    <div class="container" id="quotecontainer"><blockquote style="color: gray; font-style: italic;">Because he's the hero Konrad Group deserves, but not the one it needs right now. So we'll hunt him. Because he can take it. Because he's not our hero. He's a silent guardian, a watchful protector. A game knight.</blockquote></div>
     <div id="contentcontainer" class="container">
         {if $U}
             {foreach from=$U->messages() item=row}
