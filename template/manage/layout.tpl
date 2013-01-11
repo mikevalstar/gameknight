@@ -47,16 +47,18 @@
         {/if}
         {block "content"}You forgot to set the content!{/block}
     </div>
-    <div class="container">
-        <div id="footer">
-            {if $U}
-            <div class="pull-right small">
-                Logged in as: <a href="/users/{$U->id}">{$U->name_first} {$U->name_last}</a> - <a href="/logout">logout</a>
+    <footer>
+        <div class="container">
+            <div id="footer">
+                {if $U}
+                <div class="pull-right small">
+                    Logged in as: <a href="/users/{$U->id}">{$U->name_first} {$U->name_last}</a> - <a href="/logout">logout</a>
+                </div>
+                {/if}
+                &copy; 2013 Konrad Group
             </div>
-            {/if}
-            &copy; 2013 Konrad Group
         </div>
-    </div>
+    </footer>
     {if Tracker::_trackable()}{Tracker::htmlOut()}{/if}
 </body>
 </html>
