@@ -27,6 +27,7 @@ switch($PATH[0]){
     case 'events':
     case 'users':
     case 'massmail':
+    case 'plays':
         if(!isset($_SESSION['user'])){
             header('location: /login');
             die();

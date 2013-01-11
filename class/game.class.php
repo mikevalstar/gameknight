@@ -16,7 +16,7 @@ class game extends basedata{
 	var $_editwhencol 	= 'modified_when';
 	
 	static function lookup_by_name($name){
-        $sql = "SELECT `venue_pk` FROM `game` WHERE `game_name` = ? AND `deleted_when` IS NULL";
+        $sql = "SELECT `game_pk` FROM `game` WHERE `game_name` = ? AND `deleted_when` IS NULL";
         $par = array($name);
         $results = DBQ::prepare_execute($sql, $par);
         if($row = $results->fetch()){

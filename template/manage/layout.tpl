@@ -23,6 +23,7 @@
                 <ul class="nav" style="padding-left: 145px; font-size: 0.9em;">
                     <li><a href="/Events">Events</a></li>
                     <li><a href="/Games">Games</a></li>
+                    <li><a href="/Plays">Plays</a></li>
                     <li><a href="/Users">Users</a></li>
                     <li><a href="/MassMail">Mass Email</a></li>
                 </ul>

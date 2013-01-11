@@ -95,7 +95,6 @@ CREATE TABLE `event_game_vote` (
   UNIQUE KEY `game_fk` (`event_fk`,`user_fk`,`game_fk`)
 );
 
-
 ALTER TABLE  `game` ADD  `bgg_id` INT( 11 ) NOT NULL AFTER  `parent_fk`;
 ALTER TABLE  `game` ADD  `bgg_data` text NULL AFTER  `bgg_id`;
 ALTER TABLE  `game` ADD  `bgg_rating` DOUBLE( 6, 3 ) NOT NULL DEFAULT  '0' AFTER  `bgg_id`;
@@ -103,3 +102,37 @@ ALTER TABLE  `event` ADD  `location` VARCHAR( 250 ) NOT NULL AFTER  `event_name`
 
 ALTER TABLE  `game` ADD  `scoring_type` INT( 2 ) NOT NULL DEFAULT  '1' AFTER  `team` ,
 ADD  `game_weight` DOUBLE( 6, 3 ) NOT NULL DEFAULT  '1' AFTER  `scoring_type`;
+
+DROP TABLE IF EXISTS `play`;
+CREATE TABLE `play` (
+  `play_pk` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `game_fk` int(11) unsigned NOT NULL,
+  `playtime` int(5) NOT NULL,
+  `started` datetime NOT NULL,
+  `ranked` int(1) NOT NULL DEFAULT '0',
+  `created_by` int(11) unsigned NOT NULL,
+  `created_when` datetime NOT NULL,
+  `deleted_by` int(11) unsigned DEFAULT NULL,
+  `deleted_when` datetime DEFAULT NULL,
+  `modified_by` int(11) unsigned NOT NULL,
+  `modified_when` datetime NOT NULL,
+  PRIMARY KEY (`play_pk`)
+);
+
+DROP TABLE IF EXISTS `play_player`;
+CREATE TABLE `play_player` (
+  `play_player_pk` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `play_fk` int(11) unsigned NOT NULL,
+  `user_fk` int(11) unsigned NOT NULL,
+  `score` double(10,2) NOT NULL,
+  `win` int(1) NOT NULL,
+  `rank_change` double(6,2) NOT NULL,
+  PRIMARY KEY (`play_player_pk`)
+);
+
+ALTER TABLE  `user` ADD  `ranking` INT( 8 ) NOT NULL DEFAULT  '2000' AFTER  `name_last`;
+
+ALTER TABLE  `play_player` ADD UNIQUE (
+`play_fk` ,
+`user_fk`
+);

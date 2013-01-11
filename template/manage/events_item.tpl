@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label" for="location">Name</label>
+                                <label class="control-label" for="location">Location</label>
                                 <div class="controls">
                                     <input type="text" id="location" name="location" class="span6 required" value="{$event->location|x}" />
                                 </div>

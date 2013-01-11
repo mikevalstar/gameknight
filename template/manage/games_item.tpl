@@ -29,6 +29,9 @@
         <ul class="nav nav-tabs">
             <li class="active"><a href="#game" data-toggle="tab">Game</a></li>
             <li><a href="#owners" data-toggle="tab">Owners</a></li>
+            {if $game->game_weight > 1}
+            <li><a href="#plays" data-toggle="tab">Game Plays</a></li>
+            {/if}
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="game">
@@ -153,6 +156,11 @@
             <div class="tab-pane" id="owners">
                   {include file="sublists/owners_table.tpl" results=$game->ownerslist()->results_all() addowner=true removeowner=true}
             </div>
+            {if $game->game_weight > 1}
+            <div class="tab-pane" id="plays">
+                  {include file="sublists/gameplays.tpl" results=array()}
+            </div>
+            {/if}
         </div>
     </div>
 </div>
