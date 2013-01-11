@@ -11,6 +11,6 @@ class eventlist extends baselist{
 	/* settable properties / default values / Set as needed */
 	var $rows 				= 20;
 	var $orderby 			= 'event_start';
-	var $direction			= 'asc';
+	var $direction			= 'desc';
 
 }
