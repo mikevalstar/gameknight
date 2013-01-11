@@ -17,9 +17,11 @@
         <div class="clearfix"></div>
         <ul class="nav nav-tabs">
             <li class="active"><a href="#event" data-toggle="tab">Event</a></li>
+            {if !$event->isnew()}
             <li><a href="#participants" data-toggle="tab">Participants</a></li>
             <li><a href="#games" data-toggle="tab">Games</a></li>
             <li><a href="#food" data-toggle="tab">Food</a></li>
+            {/if}
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="event">
