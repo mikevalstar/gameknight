@@ -1,6 +1,6 @@
 {extends 'layout.tpl'}
 {block "navbar-top"}
-    <form class="form-search navbar-form pull-right">
+    <form class="form-search navbar-form pull-right" action="/games">
         <div class="input-append">
             <input type="text" name="filter" class="input-medium search-query" placeholder="Search Games" />
             <button class="btn" type="submit">Search</button>

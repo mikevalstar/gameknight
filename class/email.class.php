@@ -3,7 +3,9 @@
 class email{
     
     static function send($to, $to_name, $subject, $message, $messageHTML = false){
-        $transport = Swift_MailTransport::newInstance();
+        $transport = Swift_SmtpTransport::newInstance(EMAIL_SERVER, 25)
+          ->setUsername(EMAIL_FROM)
+          ->setPassword(EMAIL_PASSWORD);
         $mailer = Swift_Mailer::newInstance($transport);
         
         $message = Swift_Message::newInstance()
@@ -12,7 +14,7 @@ class email{
           ->setSubject($subject)
         
           // Set the From address with an associative array
-          ->setFrom(array('no-reply@konradgroup.com' => 'KG Game Knight'))
+          ->setFrom(array(EMAIL_FROM => EMAIL_FROM_NAME))
         
           // Set the To addresses with an associative array
           ->setTo(array($to => $to_name))
@@ -34,7 +36,10 @@ class email{
         foreach($users as $v)
             $user_array[$v['email']] = $v['name_first'] . ' ' . $v['name_last'];
         
-        $transport = Swift_MailTransport::newInstance();
+        $transport = Swift_SmtpTransport::newInstance(EMAIL_SERVER, 25)
+          ->setUsername(EMAIL_FROM)
+          ->setPassword(EMAIL_PASSWORD);
+          
         $mailer = Swift_Mailer::newInstance($transport);
         
         $message = Swift_Message::newInstance()
@@ -43,7 +48,7 @@ class email{
           ->setSubject($subject)
         
           // Set the From address with an associative array
-          ->setFrom(array('no-reply@konradgroup.com' => 'KG Game Knight'))
+          ->setFrom(array(EMAIL_FROM => EMAIL_FROM_NAME))
         
           // Set the To addresses with an associative array
           ->setTo($user_array)

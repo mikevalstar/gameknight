@@ -7,6 +7,11 @@ define('DB_DB', 'kggamenight');
 
 define('ENV', 'development');
 
+define('EMAIL_FROM', 'no-reply@example.com');
+define('EMAIL_FROM_NAME', 'KG Game Knight');
+define('EMAIL_SERVER', 'mail.example.com');
+define('EMAIL_PASSWORD', 'password');
+
 define('LOGIT_WEB', __DIR__.'/../log/web.log');
 define('LOGIT_CRON', __DIR__.'/../log/cron.log');
 define('LOGIT_COMMON', __DIR__.'/../log/common.log');
