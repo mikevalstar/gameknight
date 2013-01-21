@@ -9,7 +9,8 @@
         <div class="row">
             <div class="span4">
                 <h3>Details</h3>
-                <h5>{$event->event_start|x} - {$event->event_end|x}</h5>
+                <h4>Location: {$event->location|x}</h4>
+                <h4>{$event->event_start|x} - {$event->event_end|x}</h4>
                 
                 <p>{$event->event_text|nl2br}</p>
                 
