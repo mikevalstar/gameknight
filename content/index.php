@@ -10,6 +10,7 @@ switch($PATH[0]){
     case 'login':
     case 'logout':
     case 'register':
+    case 'forgot_password':
         require_once('routes/manage/'. $PATH[0] .'.php');
         break;
     // requires login

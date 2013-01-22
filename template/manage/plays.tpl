@@ -20,7 +20,7 @@
     </thead>
     <tbody>
         {foreach from=$results item=row}
-        <tr class="linkrow" data-link="/play/{$row['play_pk']}/{$row['game_name']|prettyurlencode}">
+        <tr class="linkrow" data-link="/plays/{$row['play_pk']}/{$row['game_name']|prettyurlencode}">
             <td>{$row['game_name']|x}</td>
             <td>{$row['started']|x}</td>
             <td>{$row['playtime']|x} Min</td>

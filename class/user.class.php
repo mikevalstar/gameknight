@@ -86,7 +86,7 @@ class user extends basedata{
             $user = new user($uid);
             $password = generatePassword(10, 8);
             $user->save(array('passkey' => md5($password)));
-            email::send($_POST['email'], "Game Night Password Retrieval", "Your account on KG Game Night has been reset with the following password: {$password}");
+            email::send($_POST['email'], $user->name_first . ' ' . $user->name_last, "You Idiot - Password Retreival", "Your account on KG Game Night has been reset with the following password: {$password}");
             
             return true;
         }

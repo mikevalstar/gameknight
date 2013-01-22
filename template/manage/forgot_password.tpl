@@ -3,7 +3,7 @@
 
 <div class="span6 offset3">
     <form class="form-horizontal" method="post">
-        <legend>Login</legend>
+        <legend>Forgotten Password</legend>
         {if isset($error)}
             <div class="alert alert-error">{$error}</div>
         {/if}
@@ -14,18 +14,11 @@
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="inputPassword">Password</label>
             <div class="controls">
-                <input type="password" name="password" id="inputPassword" placeholder="Password">
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">Forgotten Password</button>
             </div>
         </div>
     </form>
-    <div class="pull-right"><a href="/Forgot_Password">Forgot Your Password?</a></div>
     <div><a href="/Register">Register</a></div>
 </div>
 
