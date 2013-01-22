@@ -3,7 +3,7 @@
 {/block}
 {block name="content"}
 
-<h2 class="pull-left">Game Plays</h2>
+<h2 class="pull-left"><i class="icon-trophy"></i> Game Plays</h2>
 <div class="btn-group pull-right">
     <a class="btn" href="/plays"><i class="icon-list"></i> List</a>
     <!-- <a class="btn" href="/plays/new"><i class="icon-plus"></i> Add</a> -->

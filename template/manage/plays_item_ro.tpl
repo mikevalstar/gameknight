@@ -2,7 +2,7 @@
 {block name="content"}
 {assign 'game' $play->game()}
 
-<h2 class="pull-left">Play {$play->id}</h2>
+<h2 class="pull-left"><i class="icon-trophy"></i> Play {$play->id}</h2>
 
 <div class="btn-group pull-right">
     <form id="form_game_delete" method="post">

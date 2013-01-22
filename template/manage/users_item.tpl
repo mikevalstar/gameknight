@@ -3,7 +3,7 @@
 
 {assign 'gl' $user->gameslist()->results_all()}
 
-<h2 class="pull-left">{$user->name_first|x} {$user->name_last|x}</h2>
+<h2 class="pull-left"><i class="icon-user"></i> {$user->name_first|x} {$user->name_last|x}</h2>
 
 {if !$user->isnew()}
 <div class="btn-group pull-right">

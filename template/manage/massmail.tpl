@@ -1,7 +1,7 @@
 {extends 'layout.tpl'}
 {block name="content"}
 
-<h2 class="pull-left">Mass Mailer</h2>
+<h2 class="pull-left"><i class="icon-envelope-alt"></i> Mass Mailer</h2>
 
 <div class="clearfix"></div>
 

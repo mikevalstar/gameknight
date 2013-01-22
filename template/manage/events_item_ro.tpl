@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="span12">
-        <h2>{$event->event_name|x}</h2>
+        <h2><i class="icon-calendar"></i> {$event->event_name|x}</h2>
         <div class="clearfix"></div>
         
         <div class="row">

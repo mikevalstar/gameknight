@@ -22,7 +22,7 @@
 
 <div class="row">
     <div class="span12">
-        <h2 class="pull-left">{$game->game_name|x}</h2>
+        <h2 class="pull-left"><i class="icon-road"></i> {$game->game_name|x}</h2>
         
         {if !$game->isnew()}
         <div class="btn-group pull-right">

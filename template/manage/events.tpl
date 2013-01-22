@@ -8,7 +8,7 @@
     </form>
 {/block}
 {block name="content"}
-<h2 class="pull-left">Events</h2>
+<h2 class="pull-left"><i class="icon-calendar"></i> Events</h2>
 <div class="btn-group pull-right">
     <a class="btn" href="/events"><i class="icon-list"></i> List</a>
     <a class="btn" href="/events/new"><i class="icon-plus"></i> Add</a>

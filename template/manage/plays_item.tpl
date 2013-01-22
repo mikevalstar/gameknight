@@ -2,7 +2,7 @@
 {block name="content"}
 {assign 'game' $play->game()}
 
-<h2 class="pull-left">Play {$play->id}</h2>
+<h2 class="pull-left"><i class="icon-trophy"></i> Play {$play->id}</h2>
 
 <h1>DO NOT USE THIS INPUT METHOD, CURRENTLY BROKEN, ENTER FROM GAME PAGE</h1>
 

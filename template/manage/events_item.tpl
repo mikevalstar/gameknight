@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="span12">
-        <h2 class="pull-left">{$event->event_name|x}</h2>
+        <h2 class="pull-left"><i class="icon-calendar"></i> {$event->event_name|x}</h2>
         
         {if !$event->isnew()}
         <div class="btn-group pull-right">

@@ -9,7 +9,7 @@
 {/block}
 {block name="content"}
 
-<h2 class="pull-left">Users</h2>
+<h2 class="pull-left"><i class="icon-group"></i> Users</h2>
 <div class="btn-group pull-right">
     <a class="btn" href="/users"><i class="icon-list"></i> List</a>
     <a class="btn" href="/users/new"><i class="icon-plus"></i> Add</a>
