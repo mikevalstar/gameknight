@@ -128,7 +128,7 @@ class event extends basedata{
         $subject = "KG Game Knight: {$user->name_first} {$user->name_last} commented on: " . $this->event_name;
         $message = "{$user->name_first} {$user->name_last} wrote: \r\n\r\n {$comment_text}";
         foreach($this->participants() as $v){
-            if($user->id != $v['user_pk']){
+            if($user->id != $v['user_pk'] && $v['response'] != 'No'){
                 email::send($v['email'], $v['name_first'] . ' ' . $v['name_last'], $subject, $message);
             }
         }
