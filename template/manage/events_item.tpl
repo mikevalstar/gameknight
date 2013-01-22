@@ -168,4 +168,24 @@
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="span12"><div id="comments">
+        <h2>Comments</h2>
+        
+        {foreach from=$event->comments()->results_all() item=row}
+        <div class="comment">
+            <div class="pull-right gray small">{$row['created_when']}</div>
+            <h4>{$row['author']} <small>wrote</small></h4>
+            <p class="small">{$row['comment']|xnl2br}</p>
+        </div>
+        {/foreach}
+        
+        <form method="post">
+            <input type="hidden" name="action" value="comment" />
+            <textarea name="comment" placeholder="Comment on this event..." style="width: 99%; height: 6em;"></textarea>
+            <input type="submit" class="btn" value="Post Comment" />
+        </form>
+    </div></div>
+</div>
 {/block}

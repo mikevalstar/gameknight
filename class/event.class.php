@@ -16,7 +16,7 @@ class event extends basedata{
 	var $_editwhencol 	= 'modified_when';
     
     static function static_load($id){
-        return new game($id);
+        return new event($id);
     }
     
     function coordinator(){
@@ -112,6 +112,26 @@ class event extends basedata{
         $sql = "UPDATE `event` SET `invite_sent` = 1 WHERE `event_pk` = ? ";
         $par = array($this->id);
         $results = DBQ::prepare_execute($sql, $par);
+    }
+    
+    /* Comments */
+    function comments(){
+        return new event_commentlist($this->id);
+    }
+    
+    function post_comment($user, $comment_text){
+        if(trim($comment_text) == '') return;
+        
+        $comment = new event_comment();
+        $comment->save(array('event_fk' => $this->id, 'author' => $user->name_first . ' ' . $user->name_last, 'comment' => $comment_text));
+        
+        $subject = "KG Game Knight: {$user->name_first} {$user->name_last} commented on: " . $this->event_name;
+        $message = "{$user->name_first} {$user->name_last} wrote: \r\n\r\n {$comment_text}";
+        foreach($this->participants() as $v){
+            if($user->id != $v['user_pk']){
+                email::send($v['email'], $v['name_first'] . ' ' . $v['name_last'], $subject, $message);
+            }
+        }
     }
     
 }

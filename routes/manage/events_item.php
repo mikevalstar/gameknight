@@ -41,6 +41,11 @@ if(isset($_POST['action'])){
             header('location: /events/' . $event->id . '/'. prettyurlencode($event->event_name));
             die();
             break;
+        case 'comment':
+            $event->post_comment($_SESSION['user'], $_POST['comment']);
+            header('location: /events/' . $event->id . '/'. prettyurlencode($event->event_name));
+            die();
+            break;
     }
 }
 

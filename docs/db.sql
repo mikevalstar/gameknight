@@ -136,3 +136,18 @@ ALTER TABLE  `play_player` ADD UNIQUE (
 `play_fk` ,
 `user_fk`
 );
+
+DROP TABLE IF EXISTS `event_comment`;
+CREATE TABLE `event_comment` (
+  `event_comment_pk` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `event_fk` int(11) unsigned NOT NULL,
+  `author` varchar(250) NOT NULL,
+  `comment` text NOT NULL,
+  `created_by` int(11) unsigned NOT NULL,
+  `created_when` datetime NOT NULL,
+  `deleted_by` int(11) unsigned DEFAULT NULL,
+  `deleted_when` datetime DEFAULT NULL,
+  `modified_by` int(11) unsigned NOT NULL,
+  `modified_when` datetime NOT NULL,
+  PRIMARY KEY (`event_comment_pk`)
+);
