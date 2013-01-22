@@ -171,7 +171,7 @@
 
 <div class="row">
     <div class="span12"><div id="comments">
-        <h2>Comments</h2>
+        <h2><i class="icon-comments"></i> Comments</h2>
         
         {foreach from=$event->comments()->results_all() item=row}
         <div class="comment">

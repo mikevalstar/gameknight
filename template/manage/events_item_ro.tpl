@@ -73,13 +73,15 @@
 
 <div class="row">
     <div class="span12"><div id="comments">
-        <h2>Comments</h2>
+        <h2><i class="icon-comments"></i> Comments</h2>
         
         {foreach from=$event->comments()->results_all() item=row}
         <div class="comment">
             <div class="pull-right gray small">{$row['created_when']}</div>
             <h4>{$row['author']} <small>wrote</small></h4>
+            <i class="icon-quote-left icon-4x pull-left icon-muted"></i>
             <p class="small">{$row['comment']|xnl2br}</p>
+            <div class="clearfix"></div>
         </div>
         {/foreach}
         
