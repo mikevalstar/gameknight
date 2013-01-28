@@ -47,6 +47,9 @@
         {/if}
         {block "content"}You forgot to set the content!{/block}
     </div>
+    
+    <div class="clearfix"></div>
+    
     <footer>
         <div class="container">
             <div id="footer">
@@ -59,6 +62,6 @@
             </div>
         </div>
     </footer>
-    {if Tracker::_trackable()}{Tracker::htmlOut()}{/if}
+    {if false && Tracker::_trackable()}{Tracker::htmlOut()}{/if}
 </body>
 </html>

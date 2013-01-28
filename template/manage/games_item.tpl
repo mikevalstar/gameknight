@@ -22,7 +22,7 @@
 
 <div class="row">
     <div class="span12">
-        <h2 class="pull-left"><i class="icon-road"></i> {$game->game_name|x}</h2>
+        <h2 class="pull-left"><i class="icon-d20"></i> {$game->game_name|x}</h2>
         
         {if !$game->isnew()}
         <div class="btn-group pull-right">
@@ -36,7 +36,9 @@
         <div class="clearfix"></div>
         <ul class="nav nav-tabs">
             <li class="active"><a href="#game" data-toggle="tab">Game</a></li>
+            {if !$game->isnew()}
             <li><a href="#owners" data-toggle="tab">Owners</a></li>
+            {/if}
             {if $game->game_weight > 1}
             <li><a href="#plays" data-toggle="tab">Game Plays</a></li>
             {/if}
@@ -49,7 +51,7 @@
                         <div class="span8">
                             {if isset($bgg) && $bgg}
                                 <div class="pull-right">
-                                    <img src="{$bgg['thumbnail']}" />
+                                    <a href="http://boardgamegeek.com/boardgame/{$game->bgg_id|x}"><img src="{$bgg['thumbnail']}" /></a>
                                 </div>
                             {/if}
                             <div class="control-group">

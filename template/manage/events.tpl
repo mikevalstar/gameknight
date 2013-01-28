@@ -24,8 +24,8 @@
     </thead>
     <tbody>
         {foreach from=$results item=row}
-        <tr class="linkrow" data-link="/events/{$row['event_pk']}/{$row['event_name']|prettyurlencode}">
-            <td class="b">{$row['event_name']|x}</td>
+        <tr class="linkrow {if $row['event_start'] > date('Y-m-d')}b{/if}" data-link="/events/{$row['event_pk']}/{$row['event_name']|prettyurlencode}">
+            <td>{$row['event_name']|x}</td>
             <td>{$row['event_start']|x}</td>
             <td>{$row['participants']}</td>
         </tr>

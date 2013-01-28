@@ -12,5 +12,12 @@ class eventlist extends baselist{
 	var $rows 				= 20;
 	var $orderby 			= 'event_start';
 	var $direction			= 'desc';
+	
+	function __construct($upcoming_only = false){
+        if($upcoming_only){
+            $this->_ext_where[] = " AND event_start > DATE_SUB(NOW(), INTERVAL 12 HOUR) ";
+            $this->direction = 'asc';
+        }
+    }
 
 }

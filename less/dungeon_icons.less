@@ -1,0 +1,80 @@
+@font-face {
+	font-family: 'dungeon_icons';
+	src:url('/font/dungeon_icons.eot');
+	src:url('/font/dungeon_icons.eot?#iefix') format('embedded-opentype'),
+		url('/font/dungeon_icons.svg#dungeon_icons') format('svg'),
+		url('/font/dungeon_icons.woff') format('woff'),
+		url('/font/dungeon_icons.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'dungeon_icons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-d10:before, .icon-d12:before, .icon-d8:before, .icon-d6:before, .icon-d4:before, .icon-d20:before, .icon-d4_version2:before, .icon-bow:before, .icon-chest:before, .icon-shield:before, .icon-sword_alt:before, .icon-sword:before, .icon-female:before, .icon-male:before, .icon-androgyny:before {
+	font-family: 'dungeon_icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-d10:before {
+	content: "\61";
+}
+.icon-d12:before {
+	content: "\62";
+}
+.icon-d8:before {
+	content: "\63";
+}
+.icon-d6:before {
+	content: "\64";
+}
+.icon-d4:before {
+	content: "\65";
+}
+.icon-d20:before {
+	content: "\66";
+}
+.icon-d4_version2:before {
+	content: "\67";
+}
+.icon-bow:before {
+	content: "\68";
+}
+.icon-chest:before {
+	content: "\69";
+}
+.icon-shield:before {
+	content: "\6a";
+}
+.icon-sword_alt:before {
+	content: "\6b";
+}
+.icon-sword:before {
+	content: "\6c";
+}
+.icon-female:before {
+	content: "\6d";
+}
+.icon-male:before {
+	content: "\6e";
+}
+.icon-androgyny:before {
+	content: "\6f";
+}

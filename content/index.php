@@ -15,15 +15,8 @@ switch($PATH[0]){
         break;
     // requires login
     case '':
-        $PATH[0] = 'index';
     case 'index':
-        if(!isset($_SESSION['user'])){
-            header('location: /login');
-            die();
-        }
-        $T = new bTemplate('manage', $PATH[0] . '.tpl');
-        $T->run();
-        break;
+        $PATH[0] = 'home';
     case 'games':
     case 'events':
     case 'users':

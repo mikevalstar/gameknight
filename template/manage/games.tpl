@@ -8,7 +8,7 @@
     </form>
 {/block}
 {block name="content"}
-<h2 class="pull-left"><i class="icon-road"></i> Games</h2>
+<h2 class="pull-left"><i class="icon-d20"></i> Games</h2>
 <div class="btn-group pull-right">
     <a class="btn" href="/games"><i class="icon-list"></i> List</a>
     <a class="btn" href="/games/new"><i class="icon-plus"></i> Add</a>
