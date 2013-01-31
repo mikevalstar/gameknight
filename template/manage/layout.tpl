@@ -2,6 +2,16 @@
 <html>
 <head>
     <title>{block "title"}{/block}Game Knight</title>
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple_logo_512.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple_logo_57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple_logo_72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple_logo_114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple_logo_144.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/apple_logo_256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/apple_logo_512.png">
+    
     <link rel="stylesheet" href="/css/css.php" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="/js/bootstrap-tab.js"></script>
