@@ -15,7 +15,9 @@ $(function(){
         }
     };
     $('.simplefiltertable').keyup(simplefilter).change(simplefilter);
-    $('.datepicker').datepicker({format: 'yyyy-mm-dd'});
+    $('.datepicker').datepicker({format: 'yyyy-mm-dd'}).on('changeDate', function(ev) {
+        $(this).datepicker('hide').blur();
+    });
     
     // Submit for another form
     $("button[data-submitfor],input[data-submitfor],a[data-submitfor]").click(function(e){
@@ -93,7 +95,6 @@ $(function(){
         $('.konami').toggle();
       }
   });
-  $('.datepicker').datepicker();
   $('.timepicker').timepicker({minuteStep: 5, defaultTime: 'value'});
 
   // if the hash is set select the tab
